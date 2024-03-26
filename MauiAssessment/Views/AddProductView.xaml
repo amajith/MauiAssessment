@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewmodels="clr-namespace:MauiAssessment.ViewModels"
+             x:DataType="viewmodels:AddProductViewmodel"
+             x:Class="MauiAssessment.Views.AddProductView"
+             Title="Add Product">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style TargetType="StackLayout">
+                <Setter Property="Spacing" Value="10"/>
+                <Setter Property="Orientation" Value="Horizontal" />
+            </Style>
+        </ResourceDictionary>
+
+    </ContentPage.Resources>
+    <ScrollView>
+        <VerticalStackLayout Margin="20" Spacing="10">
+            <StackLayout>
+                <StackLayout Spacing="2">
+                    <Label Text="Product Name" VerticalOptions="Center"/>
+                    <Label Text="*" VerticalOptions="Start" FontSize="12" TextColor="Red" Padding="0, 10 , 0 , 0"/>
+                </StackLayout>
+                <Entry Text="{Binding ProductDetail.Name}" HorizontalOptions="FillAndExpand" VerticalOptions="Center"/>
+            </StackLayout>
+
+            <StackLayout>
+                 <StackLayout Spacing="2" MinimumWidthRequest="76">
+                    <Label Text="Price" VerticalOptions="Center"/>
+                    <Label Text="*" VerticalOptions="Start" FontSize="12" TextColor="Red" Padding="0, 10 , 0 , 0"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" VerticalOptions="Center" HorizontalOptions="FillAndExpand">
+                    <Label Text="Rs." VerticalOptions="Center"/>
+                    <Entry x:Name="price" Text="{Binding ProductDetail.Price}" Keyboard="Numeric" HorizontalOptions="FillAndExpand"  VerticalOptions="Center"/>
+                </StackLayout>
+            </StackLayout>
+
+            <StackLayout>
+                <StackLayout Spacing="2" MinimumWidthRequest="106">
+                    <Label Text="Category" VerticalOptions="Center"/>
+                    <Label Text="*" VerticalOptions="Start" FontSize="12" TextColor="Red" Padding="0, 10 , 0 , 0"/>
+                </StackLayout>
+                <Picker Title="Select Category" SelectedItem="{Binding ProductDetail.Category}" HorizontalOptions="FillAndExpand">
+                    <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                    <x:String>Electronics</x:String>
+                    <x:String>Fashion</x:String>
+                    <x:String>Home Appliances</x:String>
+                    <x:String>Furnitures</x:String>
+                    <x:String>Computer Accessories</x:String>
+                    <x:String>Clothing</x:String>
+                    <x:String>Medicines</x:String>
+                    </x:Array>
+                    </Picker.ItemsSource>
+                </Picker>
+            </StackLayout>
+
+            <StackLayout>
+                <StackLayout Spacing="2" MinimumWidthRequest="106">
+                    <Label Text="Detail" VerticalOptions="Start"/>
+                    <Label Text="*" VerticalOptions="Start" FontSize="12" TextColor="Red" Padding="0, -3 , 0 , 0"/>
+                </StackLayout>
+                <Editor Placeholder="Type here..." PlaceholderColor="Gray" Keyboard="Chat" BackgroundColor="{StaticResource Gray100}" Text="{Binding ProductDetail.Detail}" HorizontalOptions="FillAndExpand" VerticalOptions="Start" HeightRequest="200"/>
+            </StackLayout>
+
+            <StackLayout>
+                <Label Text="Product Image" VerticalOptions="StartAndExpand" Padding="0, 10, 0 , 0" MinimumWidthRequest="108"/>
+                <VerticalStackLayout Spacing="20">
+                <Button Text="Capture Photo" Command="{Binding CaptureProductPhotoCommand}" BackgroundColor="{StaticResource Primary}"/>
+                <Image x:Name="product_image" Source="{Binding CompleteProductPhotoPath,Mode=TwoWay}" 
+                    IsVisible="{Binding HasPhoto}" HeightRequest="150" VerticalOptions="FillAndExpand" />
+
+                </VerticalStackLayout>
+            </StackLayout>
+            <StackLayout>
+                <Label Text="Launch Date" VerticalOptions="Center" MinimumWidthRequest="108"/>
+                <DatePicker x:Name="datePickerValue" Date="{Binding ProductDetail.LaunchDate}" Format="dd/MM/yyyy" HorizontalOptions="FillAndExpand" VerticalOptions="Center" DateSelected="DatePicker_DateSelected"/>
+            </StackLayout>
+            <Button Grid.Row="1" Margin="15" Command="{Binding AddUpdateProductCommand}" FontSize="15" Text="Save" BackgroundColor="{StaticResource Primary}"/>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

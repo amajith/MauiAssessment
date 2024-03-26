@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiAssessment.Views.ListProductsView"
+             xmlns:models="clr-namespace:MauiAssessment.Models"
+             xmlns:viewModels="clr-namespace:MauiAssessment.ViewModels"
+             x:DataType="viewModels:ListProductsViewModel"
+             Title="Products">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height=".1*" />
+            <RowDefinition Height=".9*"/>
+            <RowDefinition Height=".12*"/>
+        </Grid.RowDefinitions>
+        <HorizontalStackLayout IsVisible="{Binding IsCollectionViewVisible}" Padding="10" Background="LightBlue" HeightRequest="40" Spacing="10">
+            <Image Source="info.png" WidthRequest="15" HeightRequest="15" VerticalOptions="Center"/>
+            <Label Grid.Row="0" Text="Swipt Right on a product to Edit or Delete" VerticalOptions="Center"/>
+        </HorizontalStackLayout>
+        <CollectionView Grid.Row="1" ItemsSource="{Binding Products}">
+            <CollectionView.ItemsLayout>
+                    <LinearItemsLayout ItemSpacing="0"
+                                       Orientation="Vertical"/>
+            </CollectionView.ItemsLayout>
+            <CollectionView.ItemTemplate>
+                <DataTemplate x:DataType="models:Product">
+                    <SwipeView>
+                        <SwipeView.RightItems>
+                            <SwipeItems>
+                                <SwipeItem Text="Delete"
+                                           BackgroundColor="LightPink"
+                                           IconImageSource="delete_icon.png"
+                                           CommandParameter="{Binding .}"
+                                           Command="{Binding Source={x:RelativeSource AncestorType={x:Type viewModels:ListProductsViewModel}},Path=DeleteProductCommand}"/>
+                                <SwipeItem Text="Edit"
+                                           IconImageSource="edit.png"
+                                           BackgroundColor="LightGreen" 
+                                           CommandParameter="{Binding .}"
+                                           Command="{Binding Source={x:RelativeSource AncestorType={x:Type viewModels:ListProductsViewModel}},Path=EditProductCommand}" />
+                            </SwipeItems>
+                        </SwipeView.RightItems>
+                        <Frame Margin="10" Padding="10" BorderColor="Transparent" BackgroundColor="{StaticResource Gray100}">
+                            <Frame.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding Source={x:RelativeSource AncestorType={x:Type viewModels:ListProductsViewModel}},Path=ProductDetailCommand}"
+                                                  CommandParameter="{Binding .}"/>
+                            </Frame.GestureRecognizers>
+                            <HorizontalStackLayout Spacing="20">
+                                <Image Source="{Binding ProductPhoto}" IsVisible="{Binding HasPhoto}" WidthRequest="100" HeightRequest="100" Aspect="AspectFill"/>
+                                <VerticalStackLayout Spacing="10">
+                                <StackLayout Orientation="Vertical" Spacing="0">
+                                    <Label Text="{Binding Name}" FontSize="18" FontAttributes="Bold" HorizontalOptions="StartAndExpand" MaxLines="2"/>
+                                    <Label Text="{Binding Price, StringFormat='Rs. {0}'}" FontSize="18" FontAttributes="Bold" HorizontalOptions="StartAndExpand"/>
+                                </StackLayout>
+
+                                <StackLayout Orientation="Vertical" Spacing="5">
+                                    <Label Text="{Binding Category, StringFormat='Category: {0}'}" />
+                                    <Label Text="{Binding LaunchDate}" />
+                                </StackLayout>
+                                
+                                </VerticalStackLayout>
+                            </HorizontalStackLayout>
+                        </Frame>
+                    </SwipeView>
+                   
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+
+            <CollectionView.EmptyView>
+                    <ContentView>
+                        <VerticalStackLayout HorizontalOptions="Center"
+                                             VerticalOptions="Center">
+                            <Label Text="No Products Found"
+                                   FontSize="18"
+                                   FontAttributes="Bold"
+                                   HorizontalTextAlignment="Center"/>
+                            <Label Margin="8" HorizontalTextAlignment="Center" Text="Try creating a product from the 'Add Product' button below"/>
+                        </VerticalStackLayout>
+                    </ContentView>
+                </CollectionView.EmptyView> 
+        </CollectionView>
+
+        <Button Grid.Row="2" Margin="15" Command="{Binding AddUpdateProductCommand}" FontSize="15" Text="Add Product" BackgroundColor="{StaticResource Primary}"/>
+    </Grid>
+</ContentPage>

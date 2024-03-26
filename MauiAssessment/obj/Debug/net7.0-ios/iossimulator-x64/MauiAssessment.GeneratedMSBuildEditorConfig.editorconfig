@@ -1,0 +1,59 @@
+is_global = true
+build_property.TargetFramework = net7.0-ios
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = false
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = MauiAssessment
+build_property.ProjectDir = /Users/2000116688/Projects/MauiAssessment/MauiAssessment/
+
+[/Users/2000116688/Projects/MauiAssessment/MauiAssessment/App.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MauiAssessment.App.xaml
+build_metadata.AdditionalFiles.TargetPath = App.xaml
+build_metadata.AdditionalFiles.RelativePath = App.xaml
+
+[/Users/2000116688/Projects/MauiAssessment/MauiAssessment/AppShell.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MauiAssessment.AppShell.xaml
+build_metadata.AdditionalFiles.TargetPath = AppShell.xaml
+build_metadata.AdditionalFiles.RelativePath = AppShell.xaml
+
+[/Users/2000116688/Projects/MauiAssessment/MauiAssessment/MainPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MauiAssessment.MainPage.xaml
+build_metadata.AdditionalFiles.TargetPath = MainPage.xaml
+build_metadata.AdditionalFiles.RelativePath = MainPage.xaml
+
+[/Users/2000116688/Projects/MauiAssessment/MauiAssessment/Resources/Styles/Colors.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MauiAssessment.Resources.Styles.Colors.xaml
+build_metadata.AdditionalFiles.TargetPath = Resources/Styles/Colors.xaml
+build_metadata.AdditionalFiles.RelativePath = Resources/Styles/Colors.xaml
+
+[/Users/2000116688/Projects/MauiAssessment/MauiAssessment/Resources/Styles/Styles.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MauiAssessment.Resources.Styles.Styles.xaml
+build_metadata.AdditionalFiles.TargetPath = Resources/Styles/Styles.xaml
+build_metadata.AdditionalFiles.RelativePath = Resources/Styles/Styles.xaml
+
+[/Users/2000116688/Projects/MauiAssessment/MauiAssessment/Views/AddProductView.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MauiAssessment.Views.AddProductView.xaml
+build_metadata.AdditionalFiles.TargetPath = Views/AddProductView.xaml
+build_metadata.AdditionalFiles.RelativePath = Views/AddProductView.xaml
+
+[/Users/2000116688/Projects/MauiAssessment/MauiAssessment/Views/ListProductsView.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MauiAssessment.Views.ListProductsView.xaml
+build_metadata.AdditionalFiles.TargetPath = Views/ListProductsView.xaml
+build_metadata.AdditionalFiles.RelativePath = Views/ListProductsView.xaml
+
+[/Users/2000116688/Projects/MauiAssessment/MauiAssessment/Views/ProductDetailView.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MauiAssessment.Views.ProductDetailView.xaml
+build_metadata.AdditionalFiles.TargetPath = Views/ProductDetailView.xaml
+build_metadata.AdditionalFiles.RelativePath = Views/ProductDetailView.xaml

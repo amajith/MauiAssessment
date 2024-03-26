@@ -1,0 +1,82 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MauiAssessment</name>
+    </assembly>
+    <members>
+        <member name="T:MauiAssessment.ViewModels.AddProductViewmodel">
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="P:MauiAssessment.ViewModels.AddProductViewmodel.ProductDetail">
+            <inheritdoc cref="F:MauiAssessment.ViewModels.AddProductViewmodel._productDetail"/>
+        </member>
+        <member name="F:MauiAssessment.ViewModels.AddProductViewmodel.addUpdateProductCommand">
+            <summary>The backing field for <see cref="P:MauiAssessment.ViewModels.AddProductViewmodel.AddUpdateProductCommand"/>.</summary>
+        </member>
+        <member name="P:MauiAssessment.ViewModels.AddProductViewmodel.AddUpdateProductCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:MauiAssessment.ViewModels.AddProductViewmodel.AddUpdateProduct"/>.</summary>
+        </member>
+        <member name="T:MauiAssessment.ViewModels.ListProductsViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="F:MauiAssessment.ViewModels.ListProductsViewModel.getProductListCommand">
+            <summary>The backing field for <see cref="P:MauiAssessment.ViewModels.ListProductsViewModel.GetProductListCommand"/>.</summary>
+        </member>
+        <member name="P:MauiAssessment.ViewModels.ListProductsViewModel.GetProductListCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:MauiAssessment.ViewModels.ListProductsViewModel.GetProductList"/>.</summary>
+        </member>
+        <member name="F:MauiAssessment.ViewModels.ListProductsViewModel.addUpdateProductCommand">
+            <summary>The backing field for <see cref="P:MauiAssessment.ViewModels.ListProductsViewModel.AddUpdateProductCommand"/>.</summary>
+        </member>
+        <member name="P:MauiAssessment.ViewModels.ListProductsViewModel.AddUpdateProductCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:MauiAssessment.ViewModels.ListProductsViewModel.AddUpdateProduct"/>.</summary>
+        </member>
+        <member name="F:MauiAssessment.ViewModels.ListProductsViewModel.editProductCommand">
+            <summary>The backing field for <see cref="P:MauiAssessment.ViewModels.ListProductsViewModel.EditProductCommand"/>.</summary>
+        </member>
+        <member name="P:MauiAssessment.ViewModels.ListProductsViewModel.EditProductCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand`1"/> instance wrapping <see cref="M:MauiAssessment.ViewModels.ListProductsViewModel.EditProduct(MauiAssessment.Models.Product)"/>.</summary>
+        </member>
+        <member name="F:MauiAssessment.ViewModels.ListProductsViewModel.deleteProductCommand">
+            <summary>The backing field for <see cref="P:MauiAssessment.ViewModels.ListProductsViewModel.DeleteProductCommand"/>.</summary>
+        </member>
+        <member name="P:MauiAssessment.ViewModels.ListProductsViewModel.DeleteProductCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand`1"/> instance wrapping <see cref="M:MauiAssessment.ViewModels.ListProductsViewModel.DeleteProduct(MauiAssessment.Models.Product)"/>.</summary>
+        </member>
+        <member name="F:MauiAssessment.ViewModels.ListProductsViewModel.productDetailCommand">
+            <summary>The backing field for <see cref="P:MauiAssessment.ViewModels.ListProductsViewModel.ProductDetailCommand"/>.</summary>
+        </member>
+        <member name="P:MauiAssessment.ViewModels.ListProductsViewModel.ProductDetailCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand`1"/> instance wrapping <see cref="M:MauiAssessment.ViewModels.ListProductsViewModel.ProductDetail(MauiAssessment.Models.Product)"/>.</summary>
+        </member>
+        <member name="T:MauiAssessment.ViewModels.ProductDetailViewModel">
+            <inheritdoc/>
+        </member>
+        <member name="P:MauiAssessment.ViewModels.ProductDetailViewModel.ProductDetail">
+            <inheritdoc cref="F:MauiAssessment.ViewModels.ProductDetailViewModel._productDetail"/>
+        </member>
+        <member name="T:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs">
+            <summary>
+            A helper type providing cached, reusable <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instances
+            for all properties generated with <see cref="T:CommunityToolkit.Mvvm.ComponentModel.ObservablePropertyAttribute"/>.
+            </summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.ProductDetail">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "ProductDetail" generated properties.</summary>
+        </member>
+        <member name="T:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs">
+            <summary>
+            A helper type providing cached, reusable <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instances
+            for all properties generated with <see cref="T:CommunityToolkit.Mvvm.ComponentModel.ObservablePropertyAttribute"/>.
+            </summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.ProductDetail">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "ProductDetail" generated properties.</summary>
+        </member>
+    </members>
+</doc>
