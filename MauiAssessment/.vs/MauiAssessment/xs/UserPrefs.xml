@@ -1,0 +1,26 @@
+﻿<Properties StartupConfiguration="{05267237-1420-4655-8D2C-E7EFBAC4D3AC}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="ViewModels/AddProductViewModel.cs">
+    <Files>
+      <File FileName="App.xaml" Line="16" Column="1" />
+      <File FileName="Views/AddProductView.xaml.cs" Line="1" Column="1" />
+      <File FileName="Views/ListProductsView.xaml" Line="1" Column="1" />
+      <File FileName="Views/AddProductView.xaml" Line="24" Column="52" />
+      <File FileName="ViewModels/AddProductViewModel.cs" Line="28" Column="45" />
+      <File FileName="Models/Product.cs" Line="10" Column="27" />
+      <File FileName="ViewModels/ListProductsViewModel.cs" Line="58" Column="40" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__" />
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.MauiAssessment PreferredExecutionTarget="MyAppleMacCatalystID" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <Xamarin.Addins.Core.Project ActiveDebugTarget="MyAppleMacCatalystID" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+</Properties>

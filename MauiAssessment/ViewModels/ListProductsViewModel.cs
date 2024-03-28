@@ -48,7 +48,14 @@ namespace MauiAssessment.ViewModels
         [RelayCommand]
         async Task AddUpdateProduct()
         {
-            await Shell.Current.GoToAsync(nameof(AddProductView), true);
+            try
+            {
+                await Shell.Current.GoToAsync(nameof(AddProductView), true);
+            }
+            catch (Exception e)
+            {
+                await Shell.Current.DisplayAlert($"Error: {e}", "Something went wrong please restart the app", "OK");
+            }
         }
 
         [RelayCommand]
